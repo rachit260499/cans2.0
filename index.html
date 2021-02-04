@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cans</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <section class="sec">
+        <header>
+            <a href="#"><img src="rachit.png" class="logo"></a>
+            <div class="togglemenu" onclick="menutoggle() "></div>
+            <ul class="navigation">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">PRODUCTS</a></li>
+                <li><a href="#">WHAT'S NEW</a></li>
+                <li><a href="#">NEWSLETTER</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textbox">
+                <h2>Click on the below<br><span>Cans</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dolore expedita eveniet quam vero quibusdam rerum adipisci voluptatibus temporibus culpa? Ducimus, molestiae! Vero delectus, modi impedit aperiam nesciunt magnam accusantium.</p>
+                <a href="#">View all products</a>
+            </div>
+            <div class="imgbox">
+                <img src="rachit_can.png" alt="" class="rachit">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="rachit_can.png" alt="" onclick="imgslider('rachit_can.png');bgcolor('#1e1e1e ')"></li>
+            <li><img src="arnab_can.png" alt="" onclick="imgslider('arnab_can.png');bgcolor('#e60c2c')"></li>
+            <li><img src="pulkit_can.png" alt="" onclick="imgslider('pulkit_can.png');bgcolor('#228B22')"></li>
+            <li><img src="akash_can.png" alt="" onclick="imgslider('akash_can.png');bgcolor('#0062be')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="https://www.facebook.com/rachit.shrivastava.98/"><img src="facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="twitter.png" alt=""></a></li>
+            <li><a href="https://www.instagram.com/rachitshrivastava/"><img src="instagram.png" alt=""></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function imgslider(anything){
+            document.querySelector('.rachit').src = anything;
+        }
+        function bgcolor(color){
+            const sec = document.querySelector('.sec');
+            sec.style.background=color;
+        }
+        function menutoggle(){
+            const togglemenu = document.querySelector('.togglemenu');
+            const navigation = document.querySelector('.navigation');
+            navigation.classList.toggle('active')
+            togglemenu.classList.toggle('active')
+        }
+    
+    </script>
+    
+</body>
+</html>
